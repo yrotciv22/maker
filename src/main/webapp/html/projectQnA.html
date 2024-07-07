@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Q&A | e리빙</title>
+	<link rel="stylesheet" href="../css/notice.css">
+	<link rel="icon" type="image/png" href="#" />
+	<script type="text/javascript" src="../js/jquery-3.7.1.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$("#header").load("../html/header2.html");
+			$("#footer").load("../html/footer2.html");
+		});
+	</script>
+</head>
+
+<body>
+	<!--<div class="wrap">-->
+	<!-- 헤더 + nav바 -->
+	<div id="header"></div>
+
+	<!---------------- notice  시작지점----------------------- -->
+	<div class="noticeBox1">
+		<div class="noticeBox2">
+			<!---------------- 사이드바 지점----------------------- -->
+			<div class="noticeSideBox1">
+				<div class="noticeSideName">묻고 답하기</div>
+				<ul class="noticeList">
+					<li>
+						<a class="nameNotice">공지사항 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&gt;</a>
+					</li>
+					<li>
+						<a class="nameNotice">자주하는 질문 &nbsp;&nbsp;&nbsp;&nbsp; &gt;</a>
+					</li>
+					<li>
+						<a class="nameNotice">질문게시판 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &gt;</a>
+					</li>
+				</ul>
+
+
+				<!--  글쓰기 버튼 -> 로그인창으로 연결 -->
+				<a href="login.html" class="QnAwriten">
+					<div class="QnAwritenText">
+						<span class="QnAwritenText1">찾으시는 내용이 없나요?</span>
+						<span class="QnAwritenText2">직접 질문하기</span>
+					</div>
+				</a>
+			</div>
+			<!---------------- 사이드바 종료지점----------------------- -->
+
+
+
+
+			<!---------------- 메인 notice 시작 지점----------------------- -->
+			<div class="noticeMainBox1">
+				<div class="noticeMaintopBox">
+					<div class="noticeMaintopBox2">
+						<h2 class="noticeMaintopName">공지사항</h2>
+						<span class="noticeMaintopSideName">e리빙의 새로운 소식과 유용한 정보를 알려드립니다</span>
+					</div>
+				</div>
+
+
+				<div class="noticeMiddleBox">
+					<div class="chapterNumber">번호</div>
+					<div class="chapterName">제목</div>
+					<div class="createPeopleAndDay">작성자</div>
+					<div class="createPeopleAndDay">작성일</div>
+				</div>
+
+
+				<ul class="noticeQnAList">
+					<li>
+						<a class="openimg">
+							<div class="Allchapter">
+								<img src="../image/QnAimage.png" alt="내용물">
+								<div class="Allchapter1">공지</div>
+								<div class="Allchapter2">[안내] e리빙 쇼핑몰 오픈</div>
+								<div class="Allchapter3">대표이사</div>
+								<div class="Allchapter4">2024.06.17</div>
+							</div>
+						</a>
+					</li>
+
+					<li>
+						<a class="openimg">
+							<div class="Allchapter">
+								<img src="../image/QnAimage.png" alt="내용물">
+								<div class="Allchapter1">공지</div>
+								<div class="Allchapter2">[안내] e리빙 쇼핑몰 오픈기념 이벤트</div>
+								<div class="Allchapter3">대표이사</div>
+								<div class="Allchapter4">2024.06.17</div>
+							</div>
+						</a>
+					</li>
+
+					<li>
+						<a class="openimg">
+							<div class="Allchapter">
+								<img src="../image/QnAimage.png" alt="내용물">
+								<div class="Allchapter1">2</div>
+								<div class="Allchapter2">[질문게시판] 상품 언제 오나요</div>
+								<div class="Allchapter3">구매자</div>
+								<div class="Allchapter4">2024.06.17</div>
+							</div>
+						</a>
+					</li>
+
+					<li>
+						<a class="openimg">
+							<div class="Allchapter">
+								<img src="../image/QnAimage.png" alt="내용물">
+								<div class="Allchapter1">1</div>
+								<div class="Allchapter2">[자주 묻는 질문] 상품 배송 시기</div>
+								<div class="Allchapter3">고객센터</div>
+								<div class="Allchapter4">2024.06.17</div>
+							</div>
+						</a>
+					</li>
+				</ul>
+
+
+				<div class="noticeNextList">
+					<div class="cursorSetingBox">
+						<button type="button" class="leftgoingIcon">
+							<div class="leftgoingText"></div>
+						</button>
+						<button type="button" class="rightgoingIcon">
+							<div class="rightgoingText"></div>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!---------------- 메인 notice 종료 지점----------------------- -->
+
+	</div>
+	</div>
+	<!---------------- notice 최종 종료지점----------------------- -->
+	<!-- 푸터 붙이기 -->
+	<div id="footer"></div>
+
+</body>
+
+</html>

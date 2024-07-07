@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>로그인 | e리빙</title>
+	<link rel="icon" type="img/png" href="#" />
+	<link rel="stylesheet" type="text/css" href="../css/login.css">
+	<!-- 눈모양 아이콘 -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+		integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<script type="text/javascript" src="../js/jquery-3.7.1.min.js"></script>
+	<script type="text/javascript" src="../js/login.js"></script>
+</head>
+
+<body>
+
+	<body>
+		<!-- 헤더 + nav바 -->
+		<div id="header"></div>
+
+		<div class="content-wrapper">
+			<div class="login-container">
+				<h1>로그인</h1>
+				<form id="login-form" action="/login" method="post">
+					<input type="text" name="id" placeholder=" ID" required>
+					<div id="error-message" class="error-message" style="display: none; color: red;"></div>
+					<div class="password-field">
+						<input type="password" name="password" placeholder=" PW" required>
+						<!-- 비밀번호 보이게 -->
+						<span class="password-toggle-icon">
+							<i class="fas fa-eye"></i>
+						</span>
+					</div>
+
+					<input type="submit" value="로그인" class="login-btn"><br>
+					―――――― or ――――――
+					<button type="button" class="signup-btn" onclick="window.location.href='memjoin.html'">회원가입</button>
+					<!-- 회원가입페이지 링크 작성 -->
+				</form>
+			</div>
+		</div>
+		<footer></footer>
+		<!-- 푸터 붙이기 -->
+		<div id="footer"></div>
+
+	</body>
+
+</html>

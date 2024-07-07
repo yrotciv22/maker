@@ -1,0 +1,181 @@
+/* 장바구니 cartItem.css */
+
+.contents {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    text-align: center;
+    justify-content: center;
+}
+
+/* //////////////////// */
+/* 장바구니 배너 css */
+/* //////////////////// */
+#top-banner {
+    width: 1020px;
+    height: 140px;
+    margin: 0 auto;
+    /* 자식 요소의 위치 기준을 top-banner로 지정 */
+    position: relative;
+    background: #43C6AC;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #191654, #43C6AC);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #191654, #43C6AC);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#top-banner span {
+    position: absolute;
+    /* 왼쪽 가장자리에서 10px 떨어짐 */
+    left: 20px;
+    /* 수직 중앙 정렬 */
+    top: 50%;
+    /* 자신의 높이의 50%만큼 위로 이동 */
+    transform: translateY(-50%);
+    font-family: 'NanumGothic', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* 장바구니 + 선택삭제버튼 */
+#cartBox {
+    margin: 0 auto;
+    width: 1020px;
+}
+
+/* //////////////////// */
+/* 장바구니 테이블 관련 css */
+/* //////////////////// */
+#cart-table thead {
+    background-color: transparent;
+    border-top: 3px solid #191654;
+    border-bottom: 3px solid #191654;
+    height: 40px;
+    /* 헤더 셀 테두리 제거 */
+    border-left: none;
+    border-right: none;
+}
+
+#cart-table {
+    /* float 속성이 적용된 버튼 요소 아래에 테이블이 배치 */
+    width: 100%;
+    height: 40px;
+    clear: both;
+    margin-top: 20px;
+    /* 테두리 병합 */
+    border-collapse: collapse;
+    border-bottom: 3px solid #191654;
+}
+
+#cart-table th,
+#cart-table td {
+    border: 1px solid #ddd;
+    /* 내부 셀 테두리 */
+    padding: 8px;
+    /* 셀 내부 여백 */
+}
+
+/* 도서 산간 지역 제외 글씨 작게 */
+#cart-table td:last-child br+span {
+    font-size: 0.7em;
+}
+
+
+/* ////////////////////////// */
+/* 하단 가격테이블 price-table */
+/* ////////////////////////// */
+#price-table {
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    clear: both;
+    background-color: rgb(214, 214, 214);
+    width: 1020px;
+    height: 80px;
+    table-layout: fixed;
+    padding: 15px;
+}
+
+#price-table td {
+    width: 20%;
+}
+
+
+/* 버튼 */
+/* 선택 삭제 버튼 */
+#deleteBox {
+    float: left;
+    text-align: left;
+    padding-top: 15px;
+    padding-left: 5px;
+}
+
+
+#deleteSelectedBtn {
+    box-sizing: border-box;
+    font-family: 'NanumSquareRound', sans-serif;
+    margin-left: 0;
+    display: flex;
+    justify-content: left;
+
+    /* 버튼속 글씨 */
+    align-items: center;
+    padding: 14px 24px;
+    gap: 8px;
+
+    width: 110px;
+    height: 31px;
+
+    background: #F9F9F9;
+    border: 2px solid rgba(0, 0, 0, 0.32);
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+/* 클릭했을 때 버튼 색 진해짐 */
+#deleteSelectedBtn:active {
+    background: #f9f9f99d;
+}
+
+/* 주문하기 버튼 */
+#purchaseButton {
+    /* 폰트  */
+    font-family: 'NanumSquareRound', sans-serif;
+    color: #ffffff;
+    font-weight: bold;
+    /* 폰트 간격조절 */
+    letter-spacing: 1px;
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 24px;
+    gap: 8px;
+
+    position: relative;
+    width: 164px;
+    height: 44px;
+
+    background: #1b1e58;
+    /* Button Shadow */
+    box-shadow: 0px 1px 2px rgba(118, 106, 106, 0.369);
+    border-radius: 8px;
+
+    /* 테두리 제거 */
+    border: none;
+
+    /* 중앙 정렬을 위한 margin 설정 */
+    margin: 0 auto;
+
+    cursor: pointer;
+}
+
+/* 클릭했을 때 주문하기 버튼 색 진해짐 */
+#purchaseButton:active {
+    background: #254a6e;
+}

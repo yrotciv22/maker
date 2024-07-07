@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+/* 오픈런 css */
+* {margin:0 auto;}
+
+#wrap {width:1200px;  text-align: center; background-color:#eeeeee;}
+
+img { border:0; margin:0;}
+
+table td {border: 1px solid black; margin: 0; height: 140px; width: 400px;
+		  font-size: 35px; font-weight: bold; border: none;}
+
+#topSection img {position: relative; width:1540px; right: 160px;}
+
+#firstRound, #thirdRound {opacity: 60%; background: gray; color: #5a5a5a;}
+
+#secondRound a{display: block; padding: 1rem;}
+
+#mainPrd h1 {position: relative; right: 140px; }
+
+#mainPrd p {position: relative; left:110px ;bottom: 70px;}
+
+#timerText {position: relative; font-size: 20px; font-weight: bold; right: 160px; top:22px;
+			color: rgb(63,63,63);}
+
+#mainImg {width: 49%; margin-top: 20px; margin-bottom: 5px;}
+
+#freeGiftBox {height: 360px;}
+
+#freeGift1 {width:270px; height: 270px; position: relative; right: 170px;}
+
+#freeGift2 {width:270px; height: 270px; position: relative; bottom: 275px; left: 170px;}
+
+#footerSection {width:1200; height: 400px; background: gray;}
+
+#footerBox {font-size: 40px; color: #5a5a5a; position:relative; top:70px; font-weight: bold;}
+
+#footerBox p {margin-bottom: 20px; text-shadow: 3px 3px 4px black;}
+
+#footerDate {width:325px; border-bottom: 1px solid; border-top: 1px solid; color: white;}
+
+#NotificationBtn a {font-size: 30px; border: 2px solid white; border-radius: 10px; width: 360px;
+				  background: rgb(63,63,63); color: white; font-weight: lighter; padding: 5px;
+				  text-shadow:none;}
+			
+				  
+#timer {
+    font-size: 3em;
+    font-weight: 100;
+    color: white;
+    padding: 20px;
+    width: 700px;
+    color: white;
+}
+
+#timer span {
+	font-size:60px;
+    color: rgb(63,63,63);
+}
+
+#timer div {
+    display: inline-block;
+    min-width: 90px;
+    padding: 15px;
+    background: rgb(63,63,63);
+    border-radius: 10px;
+    border: 1px solid #030d52;
+    margin: 15px;
+    box-shadow: -3px 3px 4px gray;
+}
+
+#timer div span {
+    color: #ffffff;
+    display: block;
+    margin-top: 15px;
+    font-size: .35em;
+    font-weight: 400;
+}

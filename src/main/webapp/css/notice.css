@@ -1,0 +1,310 @@
+@charset "UTF-8";
+
+
+.noticeBox1 {
+    position: relative;
+    min-width: 1050px;
+}
+
+/* 일단 가운데 칸을 차지할 큰 상자 하나 */
+
+.noticeBox2 {
+    display: flex;
+    width: 1050px;
+    padding: 50px 0px 80px;
+    margin: 0px auto;
+    /*  flex-direction: row; */
+    justify-content: space-between;
+}
+
+/* 그 큰 상자 안에서 들어갈 내용이랑 헤더랑 공간 벌릴 상자 하나  
+내부에는 왼쪽 사이드랑 메인 공간 상자 만들기*/
+
+
+.noticeSideBox1 {
+    width: 200px;
+}
+
+/* 사이드바 가로 길이 설정(메인 공간보다 무조건 작게) */
+
+
+.noticeMainBox1 {
+    width: 820px;
+}
+
+/* 메인이랑 사이드 사이에 공간 좀 남도록 해서 합이 1050을 안 넘도록 */
+
+
+
+/* -------------------일단 사이드바 먼저 작업-------------------------- */
+
+.noticeSideName {
+    height: 75px;
+    padding: 5px 0px 35px 1px;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 35px;
+    color: rgb(51, 51, 51);
+    letter-spacing: -1px;
+}
+
+/* 제목부터 박아넣기 */
+
+.noticeList {
+    border: 1px solid rgb(63, 63, 63);
+}
+
+/* 제목 아래 목록 들어갈 상자 테두리 */
+
+.nameNotice {
+    cursor: pointer;
+    border-bottom: 1px solid rgb(242, 242, 242);
+    padding: 15px 13px 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 19px;
+    letter-spacing: -0.3px;
+    font-size: 14px;
+    color: rgb(102, 102, 102);
+    list-style: none;
+
+}
+
+.nameNotice.active {
+    background-color: rgb(250, 250, 250);
+    color: rgb(117, 255, 229);
+    font-weight: 500;
+    list-style: none;
+}
+
+.nameNotice:hover {
+    background-color: rgb(250, 250, 250);
+    color: rgb(117, 255, 229);
+    font-weight: 500;
+    list-style: none;
+}
+
+/* 1. 왜 테두리가 안 생길까
+2. 왜 클릭이 안될까
+3. 왜 색이 안 변할까
+4. 이거 만드는데 왜 이렇게 오래 걸릴까 
+5. 이야... 이름 적용을 잘못 시켰네 인생 진짜...*/
+/* -------------------사이드바 끝-------------------------- */
+
+.noticeMaintopBox {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-bottom: 27px;
+    justify-content: space-between;
+}
+
+.noticeMaintopBox2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.noticeMaintopName {
+    font-weight: 500;
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    letter-spacing: -0.5px;
+    line-height: 48px;
+}
+
+.noticeMaintopSideName {
+    padding-left: 11px;
+    font-size: 14px;
+    letter-spacing: -0.3px;
+    color: rgb(153, 153, 153);
+    line-height: 20px;
+}
+
+/*-----------------------메인 윗부분---------------------*/
+
+.noticeMiddleBox {
+    display: flex;
+    width: 100%;
+    padding: 20px 0px;
+    border-bottom: 1px solid rgb(51, 51, 51);
+    border-top: 2px solid rgb(51, 51, 51);
+}
+
+.chapterNumber {
+    flex-basis: 50px;
+    text-align: center;
+    line-height: 20px;
+    font-weight: 400;
+    color: rgb(51, 51, 51);
+    width: 50;
+}
+
+.chapterName {
+    flex-grow: 1;
+    text-align: center;
+    line-height: 20px;
+    font-weight: 400;
+    color: rgb(51, 51, 51);
+}
+
+.createPeopleAndDay {
+    flex-basis: 100px;
+    text-align: center;
+    line-height: 20px;
+    font-weight: 400;
+    color: rgb(51, 51, 51);
+    width: 100;
+}
+
+
+/*-------------------------------메인 중간부분-------------------------*/
+
+.noticeQnAList {
+    display: flex;
+    flex-direction: column;
+}
+
+.Allchapter {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid rgb(244, 244, 244);
+    cursor: pointer;
+    position: relative;
+}
+
+.Allchapter img {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 10px;
+}
+
+.Allchapter:hover img {
+    display: block;
+    width: 800px;
+    height: 400px;
+    z-index: 10;
+}
+
+.Allchapter1 {
+    text-align: center;
+    padding: 20px 0px;
+    color: rgb(76, 76, 76);
+    flex-basis: 50px;
+}
+
+.Allchapter2 {
+    padding: 20px 0px 20px 20px;
+    color: rgb(76, 76, 76);
+    flex: 1 1 0%;
+    text-align: left;
+}
+
+.Allchapter3 {
+    text-align: center;
+    padding: 20px 0px;
+    color: rgb(76, 76, 76);
+    flex-basis: 100px;
+}
+
+.Allchapter4 {
+    text-align: center;
+    padding: 20px 0px;
+    flex-basis: 100px;
+    color: rgb(153, 153, 153);
+}
+
+
+
+/*------------------------------------- 하단 이전 / 다음 버튼 -------------------------------------*/
+
+.noticeNextList {
+    display: flex;
+    justify-content: center;
+    padding: 60px 0px 30px;
+}
+
+.leftgoingIcon {
+    background-color: transparent;
+    /* 버튼 배경색 투명 */
+    border: none;
+    /* 버튼 테두리 제거 */
+    padding: 0;
+    /* 버튼 내부 여백 제거 */
+    cursor: pointer;
+    /* 마우스 커서를 포인터로 변경 */
+    width: 40px;
+    /* 버튼의 너비를 설정 */
+    height: 40px;
+    /* 버튼의 높이를 설정 */
+    background-image: url('../image/prevButton.png');
+    /* 버튼 배경에 PNG 이미지 삽입 */
+    background-size: cover;
+    /* 이미지를 버튼 크기에 맞게 조정 */
+    background-position: center;
+    /* 이미지를 버튼 중앙에 배치 */
+    background-repeat: no-repeat;
+    /* 이미지를 반복하지 않음 */
+    margin: 10px;
+}
+
+.rightgoingIcon {
+    background-color: transparent;
+    /* 버튼 배경색 투명 */
+    border: none;
+    /* 버튼 테두리 제거 */
+    padding: 0;
+    /* 버튼 내부 여백 제거 */
+    cursor: pointer;
+    /* 마우스 커서를 포인터로 변경 */
+    width: 40px;
+    /* 버튼의 너비를 설정 */
+    height: 40px;
+    /* 버튼의 높이를 설정 */
+    background-image: url('../image/nextButton.png');
+    /* 버튼 배경에 PNG 이미지 삽입 */
+    background-size: cover;
+    /* 이미지를 버튼 크기에 맞게 조정 */
+    background-position: center;
+    /* 이미지를 버튼 중앙에 배치 */
+    background-repeat: no-repeat;
+    /* 이미지를 반복하지 않음 */
+    margin: 10px;
+}
+
+/* <------------------------------글쓰기 버튼 넣는 중----------------------------------> */
+
+.QnAwriten {
+    width: 100%;
+    height: 60px;
+    padding: 0 14px 0 20px;
+    margin-top: 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(153, 153, 153);
+    line-height: 20px;
+    text-decoration: none;
+
+}
+
+.QnAwritenText {
+    display: flex;
+    flex-direction: column;
+    color: rgb(0, 0, 0);
+}
+
+.QnAwritenText1 {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+}
+
+.QnAwritenText2 {
+    font-size: 12px;
+}
+
+/* <--------------------------------------------------------------------> */

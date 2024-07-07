@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>오픈런 | e리빙</title>
+	<link rel="icon" type="image/png" href="#" />
+	<link rel='stylesheet' type='text/css' href="../css/openRun.css">
+	<script src="../js/jquery-3.7.1.min.js"></script>
+	<script src="../js/openRun.js"></script>
+	<script src="../js/timer.js"></script>
+	<script>
+		// 페이지 맨 위로 이동하는 함수
+		function scrollToTop() {
+			window.scrollTo({
+				top: 0,
+				behavior: 'smooth'
+			});
+		}
+
+		// moveToTopBox 클릭 시 scrollToTop() 함수 실행
+		document.getElementById('moveToTopBox').addEventListener('click', scrollToTop);
+	</script>
+</head>
+
+<body>
+	<!-- 헤더 + nav바 -->
+	<div id="header"></div>
+
+	<div id='wrap'>
+		<div id='topSection'>
+			<div><img src="../image/메인카드.png"></div>
+		</div>
+		<div id='bodySection'>
+			<div id='roundBox'>
+				<table>
+					<td id='firstRound'>1차 종료</td>
+					<td id='secondRound'><a href='#mainImg'>2차</a></td>
+					<td id='thirdRound' onclick='location.href= "#NotificationBtn"'>3차 comingsoon</td>
+				</table>
+			</div>
+			<div id='timerBox'>
+				<span id='timerText'>종료까지 남은 시간</span>
+				<div id='timer'></div>
+			</div>
+			<div id='mainPrd'>
+				<img src="../image/아이폰 프로 15 누끼버전.png" id='mainImg'>
+				<!-- <img src="../image/아이폰 프로 15-2 누끼버전.png" id='mainImg2'> -->
+				<h1>아이폰15프로<br>반값 특가</h1>
+				<p>50% 1,000,000<br>사은품 증정 택1</p>
+			</div>
+			<div id='freeGiftBox'>
+				<div><img id='freeGift1' src="../image/acc_충전기1.png"></div>
+				<div><img id='freeGift2' src="../image/acc_카드케이스3.png"></div>
+			</div>
+		</div>
+		<div id='footerSection'>
+			<div id='footerBox'>
+				<p>3차 최종 프로젝트<br>coming soon!</p>
+				<p id='footerDate'>2024. 07. 24 </p>
+				<div id='NotificationBtn'><a href='#'>사전 예약 참여하기</a></div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div>
+			<div id="moveToTopBox"><img src="../image/moveToTop.png" id="moveToTop"></div>
+		</div>
+	</footer> <!-- top 버튼용 footer 박스 종료 -->
+	<!-- 푸터 붙이기 -->
+	<div id="footer"></div>
+
+</body>
+
+</html>

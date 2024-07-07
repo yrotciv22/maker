@@ -1,0 +1,225 @@
+@charset "UTF-8";
+
+body {
+	background-color: white;
+}
+
+/************* 네비게이션바 스크롤 시에도 화면 상단에 고정 ***************/
+
+.mainMenuFixed {
+	position: fixed;
+	top: 0px;
+	z-index: 500;
+}
+
+.mainMenuShadow {
+	box-shadow: 0 3px 5px 0px gray;
+}
+
+
+/**************  Header  ******************/
+
+header {
+	width: 100%;
+	height: 100%;
+}
+
+header ul {
+	display: flex;
+	margin-top: 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+	overflow: hidden;
+}
+
+header a {
+	text-decoration-line: none;
+	color: black;
+	/* 글씨 색상 */
+	font-weight: bold;
+	text-align: center;
+}
+
+/**************  헤더바(최상단 메뉴바)  ******************/
+
+#headerBar {
+	display: inline-block;
+	/* 구성요소 float로 양쪽에 배치하기 위해 부여  */
+	width: 100%;
+	height: 100px;
+	line-height: 100px;
+	margin: 0 auto;
+	background-color: transparent;
+
+	font-weight: bold;
+}
+
+/* >>>>>>>>>> Header바 내부 : 로고 이미지 파트 */
+
+#topLogoBox {
+	float: left;
+	height: 100%;
+	line-height: 100px;
+	padding-left: 30px;
+}
+
+#logoItem {
+	display: inline-block;
+	position: relative;
+	height: 100%;
+	width: auto;
+}
+
+#logoItem img {
+	/* 이미지를 좀 더 크게 키우려고 함 */
+	width: 120%;
+	height: 120%;
+}
+
+
+/* >>>>>>>>>> Header바 내부 : 탑 메뉴 파트 */
+
+#topMenuBox {
+	float: right;
+
+}
+
+#topMenuItem {
+	/* 공간을 자연스럽게 띄워준다 */
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+#topMenuItem ul li {
+	margin: 0 15px;
+	font-size: 16px;
+}
+
+#topMenu1 {
+	color: rgb(63, 63, 63);
+}
+
+
+#topLoginGreet {
+	display: none;
+	/* 추후 로그인 글씨 클릭시 보여지는 항목 */
+}
+
+
+/************** 헤더바 아래 두 번째 바 : 쇼핑몰 이름, 검색창 파트  ******************/
+
+#middleBar {
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	margin: 0 auto;
+	padding-right: 10px;
+	background-color: transparent;
+	border-top: 2px solid #000;
+
+	font-weight: bold;
+}
+
+#logoName {
+	float: left;
+	padding-left: 40px;
+}
+
+#searchBar {
+	/* 우측 정렬하기 */
+	display: flex;
+	justify-content: flex-end;
+}
+
+#searchBar input,
+#searchBar button {
+	margin: 5px 5px;
+	/* 검색창과 버튼 높이 낮춤 */
+}
+
+#searchBar input {
+	width: 15%;
+}
+
+#searchBar button {
+	background-color: transparent;
+	/* 버튼의 디폴트 색상을 투명하게 */
+	border: none;
+	/* 버튼의 테두리를 없앰 */
+	padding: 0;
+	/* 버튼의 내부 여백을 제거 */
+	cursor: pointer;
+	/* 마우스 커서를 포인터로 변경 */
+	width: 30px;
+	/* 버튼의 너비를 설정 */
+	height: 30px;
+	/* 버튼의 높이를 설정 */
+	background-image: url("../image/search.png");
+	/* 버튼 배경에 PNG 이미지 삽입 */
+	background-size: cover;
+	/* 이미지를 버튼 크기에 맞게 조정 */
+	background-position: center;
+	/* 이미지를 버튼 중앙에 배치 */
+	background-repeat: no-repeat;
+	/* 이미지를 반복하지 않음 */
+}
+
+#searchBar button:hover {
+	opacity: 0.8;
+}
+
+/************** 하단 탑버튼  ******************/
+
+/* 맨 하단 top 버튼 */
+footer {
+	text-align: center;
+}
+
+#moveToTop:hover {
+	opacity: 0.7;
+	cursor: pointer;
+}
+
+
+/************ 팝업 모달 ***********************/
+
+/*   팝업 임시 버튼 스타일  */
+.btn-box .btn-open {
+	display: block;
+	width: 200px;
+	height: 50px;
+	margin: 80px auto 0;
+	line-height: 50px;
+	background: #333;
+	text-align: center;
+}
+
+.btn-box .btn-open span {
+	color: #fff;
+}
+
+/* 팝업 스타일 */
+.modal-bg {
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.6);
+	z-index: 999;
+}
+
+.modal-wrap {
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 300px;
+	height: 300px;
+	background: #fff;
+	z-index: 1000;
+}

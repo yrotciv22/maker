@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+/************* 페이지 전체 **************/
+
+.h1SizeUp {
+	font-size: 30px; 
+	font-weight: bold;
+	text-align: center;
+}
+
+article {
+	margin-top: 30px;
+}
+
+#bestReviewBox { 
+	margin-top: 150px;  
+}
+
+/**************  오픈런 이벤트 아이템 박스  ******************/
+
+#openrunBox {
+	width: 90%;
+	height: 800px;
+	padding: 30px;	
+	margin: 0 auto;
+}
+
+#openrunBox span {
+	text-align: center;
+}
+
+#openrunBox {
+	width: 90%;
+	/* inline-block 요소들 정렬 시 text-align 사용 */
+	text-align: center; 
+}
+
+#openrunBoxItem { 
+	width: 90%; 
+	/* inline-block 요소들 정렬 시 text-align 사용 */
+	text-align: center; 
+	margin: 0 auto;
+	position: relative;
+	
+    background-image: url("https://img2.quasarzone.com/editor/2024/01/04/6851f15c3b801d4371a49b5cc131ff5c.webp");
+	background-size: cover;
+	background-color: transparent;
+}
+
+/* #openrunBoxItem::before {
+	content: "";
+	opacity: 0.5;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	background-color: #000;
+} */
+
+/*********** 오픈런 박스 내부 좌측 박스 : 타이머 표시 **********/
+
+#openrunBoxOut {
+	z-index: 50;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;  
+    height: 600px; 
+    width: 90%;    
+    position: relative;
+    text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
+}
+
+#openrunItem1 { 
+    margin: auto;  
+    position: absolute;
+    top: 50%;
+ 	left: 55%;
+  	transform: translate(-50%, -50%);
+}
+  
+#openrunItem1 div {
+    display: inline-block;
+    min-width: 100px;
+    padding: 15px;
+    background: rgb(63,63,63);
+    border-radius: 10px;
+    border: 2px solid rgb(189,189,189);
+    margin: 15px;
+}
+
+#openrunItem1 div:hover {
+	opacity: 0.7;
+}
+
+#openrunItem1 div span {
+    color: #ffffff;
+    display: block;
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: 400;
+}

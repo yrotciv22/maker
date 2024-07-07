@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+/* slideshow.css */
+
+.contents {
+	margin-top: 50px;
+}
+
+#slideshowWrap {
+	width: 90%;
+	padding: 50px;
+	margin: 0 auto; 
+}
+
+#slideshow {
+	padding: 0;	  
+	margin: 0 auto;
+	position: relative; 
+	text-align: center;
+}
+
+#slideShowBox {
+	margin: 0 auto; 
+	width:1280px; 
+	height:480px;   /* 이미지 1개 width */
+	text-align:center;
+	overflow:hidden; /* 높이를 설정해야 overflow:hidden 가능 */
+}
+
+#slidePanel {
+	position:relative;
+	width:6400px; /* 이미지 5개  */
+	height:480px;
+}
+
+.slideImage {
+	float:left;
+	width:1280px;
+	height:480px;
+}
+
+#prevNextButtonBox { position:relative; z-index:10;}  /* 슬라이드 이미지 위에 위치  */
+#prevButton {position:absolute; top:210px; left:15%; opacity:0.8; cursor:pointer;}
+#nextButton {position:absolute; top:210px; right:15%; opacity:0.8; cursor:pointer;}
+
+
+#prevButton:hover {opacity:1;}
+#nextButton:hover {opacity:1;}
+
+/* control 버튼 */
+#controlPanel { margin:0 auto; width:160px;}
+#controlPanel img { float:left; margin:10px;}

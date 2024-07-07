@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>회원가입 | e리빙</title>
+	<link rel="icon" type="image/png" href="#" />
+	<link rel="stylesheet" type="text/css" href="../css/join2.css">
+	<script type="text/javascript" src="../js/jquery-3.7.1.min.js"></script> <!-- 이게 맨 위에 없으면 js 하나도 안 열림 -->
+	<script type="text/javascript" src="../js/memJoin.js"></script>
+</head>
+
+<body>
+	<!-- 헤더 + nav바 -->
+	<div id="header"></div>
+
+	<!-- <section> -->
+	<div class="joinBigbox"> <!-- 회원가입 관련 내용 담을 큰 박스 -->
+		<div class="jointext">회원가입</div><!-- jointext종료 -->
+		<div class="joinBigbox2"><!-- 입력 양식들을 넣을 큰 박스입니다 약관까지 포함입니다 -->
+			<form action="#productMap">
+				<div class="emphasis1">
+					<span class="emphasis2">*</span>
+					필수입력사항
+				</div><!-- emphasis1 종료 -->
+
+				<div class="joinBigbox3"><!-- 이용약관 이전까지의 내용을 담을 상자 -->
+					<div class="labelbox"><!-- 아이디 -->
+						<div class="labelbox2">
+							<label class="df">
+								아이디
+								<span class="emphasis2">*</span>
+							</label>
+						</div>
+						<div class="inputbox">
+							<div class="inputbox2">
+								<input class="inputtext" autofocus name="memberId" placeholder="아이디를 입력해주세요(최대 10자)"
+									type="text" required pattern="^[a-zA-Z0-9]{6,10}$" minlength="6" maxlength="10"
+									title="영숫자 최소 6자~최대 10자 입력" value=""><!-- 영문숫자로 6자이상 10자이하 -->
+
+							</div>
+						</div>
+						<div class="labelbox3">
+							<input type="checkbox" id="hiddencheck" class="hiddencheck">
+							<button class="checkbtn" type="button">
+								<label for="hiddencheck" class="checkbtn">
+									<span class="checktext">중복확인</span>
+								</label>
+							</button>
+						</div>
+					</div>
+
+
+					<div class="labelbox"><!-- 비밀번호 -->
+						<div class="labelbox2">
+							<label class="df">
+								비밀번호
+								<span class="emphasis2">*</span>
+							</label>
+						</div>
+
+						<div class="inputbox">
+							<div class="inputbox2">
+								<input name="memberpw" placeholder="비밀번호를 입력해주세요" type="password" required
+									pattern="^[a-zA-Z0-9]{8,10}$" minlength="8" maxlength="10"
+									title="영숫자 최소 8자~최대 10자 입력" class="inputtext" autocomplete="off" value="">
+							</div>
+						</div>
+
+						<div class="labelbox3"></div>
+					</div>
+					<div class="labelbox"><!-- 비밀번호 확인 -->
+						<div class="labelbox2">
+							<label class="df">
+								비밀번호 확인
+								<span class="emphasis2">*</span>
+							</label>
+						</div>
+						<div class="inputbox">
+							<div class="inputbox2">
+								<input name="membercheck" placeholder="비밀번호를 한번 더 입력해주세요" type="password" required
+									pattern="^[a-zA-Z0-9]{8,10}$" minlength="8" maxlength="10" class="inputtext"
+									autocomplete="off" value="">
+							</div>
+						</div>
+						<div class="labelbox3"></div>
+					</div>
+
+
+					<div class="labelbox"><!-- 이름 -->
+						<div class="labelbox2">
+							<label class="df">
+								이름
+								<span class="emphasis2">*</span>
+							</label>
+						</div>
+						<div class="inputbox">
+							<div class="inputbox2">
+								<input name="membername" placeholder="이름을 입력해주세요" type="text" required class="inputtext"
+									value="">
+							</div>
+						</div>
+						<div class="labelbox3"></div>
+					</div>
+
+
+					<div class="labelbox"><!-- 이메일 -->
+						<div class="labelbox2">
+							<label class="df">
+								이메일
+								<span class="emphasis2">*</span>
+							</label>
+						</div>
+						<div class="inputbox">
+							<div class="inputbox2">
+								<input name="email" placeholder="예 ) abcd@naver.com" type="text" required
+									class="inputtext" value="">
+							</div>
+						</div>
+						<div class="labelbox3"></div>
+					</div>
+
+
+					<div class="labelbox"><!-- 휴대폰 -->
+						<div class="labelbox2">
+							<label class="df">
+								휴대폰
+								<span class="emphasis2">*</span>
+							</label>
+						</div>
+						<div class="inputbox">
+							<div class="inputbox2">
+								<input name="number" placeholder="01012345678" type="tel" required
+									pattern="^[0-9]{11,11}$" minlength="11" maxlength="11" class="inputtext" value="">
+							</div>
+						</div>
+						<div class="labelbox3"></div>
+					</div>
+
+
+					<div class="labelbox"><!-- 주소 -->
+						<div class="labelbox2">
+							<label class="df">
+								주소
+								<span class="emphasis2">*</span>
+							</label>
+						</div>
+						<div class="inputbox">
+							<a href="#" class="checkbt" type="button" height="44" radius="4">
+								<span class="address">주소 검색</span>
+							</a>
+							<span class="underchecktext">배송지에 따라 상품 정보가 달라질 수 있습니다.</span>
+						</div>
+						<div class="labelbox3"></div>
+					</div>
+
+
+					<div class="labelbox"><!-- 성별 -->
+						<div class="labelbox2">
+							<label class="df">
+								성별
+								<span class="emphasis2">*</span>
+							</label>
+						</div>
+						<div class="inputbox">
+							<div class="genderBigbox">
+								<label class="genderchoice" for="man">
+									<input name="gender" type="radio" class="circle" value="male">
+									<!-- <span class ="circle2"></span> -->
+									<span class="gendertext">남자</span>
+								</label>
+								<label class="genderchoice" for="woman">
+									<input name="gender" type="radio" class="circle" value="female">
+									<!-- <span class ="circle2"></span> -->
+									<span class="gendertext">여자</span>
+								</label>
+								<label class="genderchoice" for="nochoice">
+									<input name="gender" type="radio" class="circle" value="nomale">
+									<!-- <span class ="circle2"></span> -->
+									<span class="gendertext">선택안함</span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="labelbox3"></div>
+
+					<div class="labelbox"><!-- 생년월일 -->
+						<div class="labelbox2">
+							<label class="df">
+								생년월일
+								<span class="emphasis2">*</span>
+							</label>
+						</div>
+						<div class="inputbox">
+							<div class="birthbox">
+								<div class="birthspace">
+									<div class="birthtextspace">
+										<input class="birthtext" name="year" placeholder="YYYY" value="" maxlength="4">
+									</div>
+								</div>
+
+
+								<span class="slash">/</span>
+
+
+								<div class="birthspace">
+									<div class="birthtextspace">
+										<input class="birthtext" name="month" placeholder="MM" value="" maxlength="2"
+											max="12">
+									</div>
+								</div>
+
+
+								<span class="slash">/</span>
+
+
+								<div class="birthspace">
+									<div class="birthtextspace">
+										<input class="birthtext" name="day" placeholder="DD" value="" maxlength="2">
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div class="labelbox3"></div>
+					</div><!-- 라벨박스들 종료 -->
+
+
+					<div class="underline2"></div>
+
+
+					<!-- ----------------이용약관 동의 ---------------------------------------- -->
+
+
+					<div class="agreeBigbox">
+						<div class="agreeSmallBox">
+							<label class="df">
+								이용약관동의
+								<span class="emphasis2">*</span>
+							</label>
+						</div>
+
+
+						<div class="agreeSmallBox2">
+							<div class="agreeCheckradioBox">
+								<label class="checkAndText">
+									<input type="checkbox" class="agreeCheck">
+									<input type="checkbox" class="allcheck" required>
+									<span>전체 동의합니다</span>
+								</label>
+								<p class="smalltext">필수항목에 동의하여야 회원가입이 가능합니다</p>
+							</div>
+
+
+							<div class="agreeCheckradioBox">
+								<label class="checkAndText2">
+									<input type="checkbox" class="agreeCheck">
+									<input type="checkbox" class="allcheck" required>
+									<span>이용약관 동의</span>
+									<span class="fillsu">(필수)</span>
+								</label>
+							</div>
+
+
+							<div class="agreeCheckradioBox">
+								<label class="checkAndText2">
+									<input type="checkbox" class="agreeCheck">
+									<input type="checkbox" class="allcheck" required>
+									<span>개인정보 수집,이용 동의</span>
+									<span class="fillsu">(필수)</span>
+								</label>
+							</div>
+
+
+							<div class="agreeCheckradioBox">
+								<label class="checkAndText2">
+									<input type="checkbox" class="agreeCheck">
+									<input type="checkbox" class="allcheck" required>
+									<span>본인은 만14세 이상입니다.</span>
+									<span class="fillsu">(필수)</span>
+								</label>
+							</div>
+
+
+						</div>
+					</div>
+
+
+					<!-- ------------회원가입 버튼--------------------------------------- -->
+
+
+					<div class="joinButton">
+						<button type="submit" class="joinButton2" onclick="login.html" id="joiningButton">
+							<span class="jointext2">가입하기</span>
+						</button>
+					</div>
+
+
+				</div><!-- joinBigbox3 종료 -->
+			</form>
+		</div><!-- joinBigbox2 종료 -->
+	</div> <!-- joinBigbox종료 -->
+	<!-- </section> -->
+	<!-- 푸터 붙이기 -->
+	<div id="footer"></div>
+
+</body>
+
+</html>

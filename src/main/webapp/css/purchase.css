@@ -1,0 +1,166 @@
+@charset "UTF-8";
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+#navbar {
+    margin-bottom: 40px;
+}
+
+#orderHistory {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 40px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.inputButton, .deleteButton, .buyButton {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.product-list {
+    display: flex;
+    align-items: center;
+}
+
+.product {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.product-img img {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+}
+
+.product-img span {
+    display: block;
+    text-align: center;
+}
+
+.payment-options {
+    display: flex;
+    justify-content: space-between;
+}
+
+.payment-option {
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.payment-option img {
+    width: 100px;
+    height: 50px;
+}
+
+.payment-option p {
+    margin: 10px 0 0;
+}
+
+.payment-option:hover {
+    background-color: #f0f0f0;
+}
+
+.payment-option {
+    display: inline-block;
+    margin: 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    padding: 10px;
+    transition: border-color 0.3s;
+}
+
+.payment-option.selected {
+    border-color: #000000;
+}
+
+#totalPrice, #discount, #deliveryFee, #finalPrice {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.popup {
+    display: none; /* 기본적으로 팝업을 숨김 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 4px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
